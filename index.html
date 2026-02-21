@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font awasome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+             <!-- css file  -->
+
+    <link rel="stylesheet" href="./src/output.css">
+    <style>
+        *{
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="w-19/20 max-w-[1110px] mx-auto sm:17/20 md:16/20 lg:15/20 mt-15 pb-7 border-b-[#E6E7E9] border-b-1">
+        <h1 class="font-extrabold text-4xl text-black">Job Application Tracker</h1>
+        <div class="dashbord-container flex  gap-4 flex-row justify-between mt-5">
+            <div class=" p-5 shadow-[0_0_5px_rgba(0,0,0,.1)] rounded-md w-full">
+                <p class="text-[14px] font-medium text-gray-900 mb-2">Total</p>
+                <p class="text-2xl text-black font-bold dashboard-total">0</p>
+            </div>
+            <div class=" p-5 shadow-[0_0_5px_rgba(0,0,0,.1)] rounded-md w-full">
+                <p class="text-[14px] font-medium  text-gray-900 mb-2">Interview</p>
+                <p class="text-2xl text-black font-bold dashboard-interview">0</p>
+            </div>
+            <div class=" p-5 shadow-[0_0_5px_rgba(0,0,0,.1)] rounded-md w-full">
+                <p class="text-[14px] font-medium text-gray-900 mb-2">Reject</p>
+                <p class="text-2xl text-black font-bold dashboard-reject">0</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-19/20 max-w-[1110px] mx-auto sm:17/20 md:16/20 lg:15/20 mt-15">
+        <div class="main-header w-full flex justify-between mb-6 ">
+            <h1 class="font-bold text-xl text-black ">Available Jobs</h1>
+            <p class=" text-gray-500 font-medium text-[16px]"> <span class="job-available">0</span> jobs</p>
+        </div>
+        <div class="w-full flex flex-start gap-2">
+            <button class="all-job-btn shadow-[0_0_5px_rgba(0,0,0,.1)]  rounded-[4px] btn w-20 h-8 btn-info text-[12px] font-semibold text-white">All</button>
+            <button class="all-job-btn shadow-[0_0_5px_rgba(0,0,0,.1)]  rounded-[4px] btn w-20 h-8  text-[12px] font-semibold text-gray-600">Interview</button>
+            <button class="all-job-btn shadow-[0_0_5px_rgba(0,0,0,.1)]  rounded-[4px] btn w-20 h-8 text-gray-600 text-[12px] font-semibold ">Reject</button>
+        </div>
+        <div class="job-card-container w-full"></div>
+
+    </main>
+
+
+    <!-- script file  -->
+</body>
+</html>
