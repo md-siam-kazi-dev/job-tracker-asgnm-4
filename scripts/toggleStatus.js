@@ -28,7 +28,10 @@ jobCardContainer.addEventListener('click',function(ele){
         
         let remobeId = parent.id;
         parent.remove();
-        console.log(containerDiv.children.length)
+        let currentStatus = document.querySelector(".current-status");
+        if(currentStatus){
+        	currentStatus.innerText = containerDiv.children.length;
+}
         if(containerDiv.children.length === 0){
 
             jobCardContainer.innerHTML = generateEmptyHtml();
@@ -36,7 +39,7 @@ jobCardContainer.addEventListener('click',function(ele){
         companyName = companyName.filter(job => job.id != remobeId);
     }
     
-    //delete function
+    //delete function end
 
 
     updateDashboard();
