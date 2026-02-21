@@ -8,9 +8,13 @@ function updateDashboard(){
     document.querySelector('.dashboard-rejected').innerText = rejectedJobs;
     document.querySelector('.job-available').innerText =allJobs
     let currentStatus = document.querySelector(".current-status");
+
     console.log(currentStatus)
         if(currentStatus){
-        	currentStatus.innerText = document.getElementorById('job-card-container').children.length;
+            
+
+        	currentStatus.innerText = ((document.querySelector('.empty')?0:(document.getElementById('job-card-container').children).length));
+
 }
 
 }

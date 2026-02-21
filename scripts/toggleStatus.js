@@ -37,6 +37,7 @@ jobCardContainer.addEventListener('click',function(ele){
             jobCardContainer.innerHTML = generateEmptyHtml();
         }
         companyName = companyName.filter(job => job.id != remobeId);
+         updateDashboard();
     }
     
     //delete function end
