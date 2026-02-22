@@ -28,7 +28,8 @@ body to target .after find the target it again bubling to root element.
 ans(4):event delegation means we set only on even lister to the parent for boast performance the website . then we use different components using if else to find event target.Why this useful =>
 1.it boast website performance
 2.we don't need to much event listner
-3.if we add new components  under the parent ,we didn't need to attach extra event listner to the new  components
+3.if we add new components  under the parent ,we di 
+dn't need to attach extra event listner to the new  components
 
 ### 5. What is the difference between preventDefault() and stopPropagation() methods?
 
