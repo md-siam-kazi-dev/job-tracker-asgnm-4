@@ -23,9 +23,13 @@ tabParent.addEventListener("click",function(clickButton){
         let interviewArray = companyName.filter(job => job.status === 'INTERVIEW');
         jobStatusQ.innerHTML =` <span class='current-status'>${interviewArray.length}</span> of <span class="job-available"></span> jobs`;
         generateJobCard(interviewArray);
-    }else{
+    }else if(clickButton.target.id === 'tab-rejected'){
         let rejectedArray = companyName.filter(job => job.status === 'REJECTED');
         jobStatusQ.innerHTML =` <span class='current-status'>${rejectedArray.length}</span> of <span class="job-available"></span> jobs`;
         generateJobCard(rejectedArray);
     }
 })
+
+function isAllTabSwicth(){
+    return !((document.querySelector('#tab-all') ).classList.contains('btn-info'));
+}

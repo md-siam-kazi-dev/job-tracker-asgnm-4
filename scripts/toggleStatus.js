@@ -1,21 +1,37 @@
 
 jobCardContainer.addEventListener('click',function(ele){
+    let isAlltab = isAllTabSwicth();
     if(ele.target.id === 'job-interview-btn'){
         let parent = ele.target.parentNode.parentNode
         let intId = parent.id;
+        console.log(isAllTabSwicth())
+        
         companyName.forEach((job)=>{
+           
+            if(job.status === 'REJECTED' && isAlltab){
+                    parent.remove()
+                }
             if(job.id === intId){
                 job.status = 'INTERVIEW';
                 
             }
         })
+        
     }else if(ele.target.id === 'job-rejected-btn'){
         let parent = ele.target.parentNode.parentNode
         let rjctId = parent.id;
-        console.log(rjctId);
+        
         companyName.forEach((job)=>{
+
+             // if tab is interview but client switch to rejected it will remove from interview tab 
+            if(job.status === 'INTERVIEW' && isAlltab){
+                    parent.remove()
+            }
             if(job.id === rjctId){
-                console.log(job.status)
+
+               
+                
+               
                 job.status = 'REJECTED';
                 
             }
