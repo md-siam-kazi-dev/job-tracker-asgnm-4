@@ -9,6 +9,15 @@ function generateJobCard(list){
         
     }else{
         list.forEach(job => {
+            let x = '';
+            if(job.status === 'NOT APPLIED'){
+                x = "bg-gray-200"
+            }else if(job.status === 'INTERVIEW'){
+                x = "bg-green-400";
+            }else{
+                x = "bg-red-400";
+            }
+
         card += `<div class="job-card p-6 rounded-[8px] shadow-[0_0_5px_rgba(0,0,0,.1)] " id=${job.id}>
 
 
@@ -22,7 +31,7 @@ function generateJobCard(list){
                 </div>
 
                 <p class="text-gray-500 text-[16px] mb-5">${job.salaryDutyTimeLocation}</p>
-                <div class="rounded-[8px] px-3 py-2 w-fit font-medium text-black bg-[#EEF4FF]">${job.status}</div>
+                <div class="rounded-[8px] px-3 py-2 w-fit font-medium text-black ${x}">${job.status}</div>
                 <p class="text-gray-900 text-[14px] mt-2 mb-5">${job.description}</p>
                 <div class="job-status-btn">
                     <button class="btn cursor-pointer text-green-600 border-green-600" id="job-interview-btn">INTERVIEW</button>
