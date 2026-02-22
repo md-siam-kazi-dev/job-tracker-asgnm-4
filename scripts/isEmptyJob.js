@@ -1,4 +1,3 @@
-function isEmpty(){
-     jobCardContainer.innerHTML = generateEmptyHtml();
-     console.log(44);
+function isEmpty() {
+  jobCardContainer.innerHTML = generateEmptyHtml();
 }

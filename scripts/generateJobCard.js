@@ -1,24 +1,22 @@
-let jobCardContainer = document.getElementById('job-card-container')
+let jobCardContainer = document.getElementById("job-card-container");
 
-function generateJobCard(list){
-    let card = "";
-    
-    if(list.length === 0){
-        
-        jobCardContainer.innerHTML = generateEmptyHtml();
-        
-    }else{
-        list.forEach(job => {
-            let x = '';
-            if(job.status === 'NOT APPLIED'){
-                x = "bg-gray-200"
-            }else if(job.status === 'INTERVIEW'){
-                x = "bg-green-400";
-            }else{
-                x = "bg-red-400";
-            }
+function generateJobCard(list) {
+  let card = "";
 
-        card += `<div class="job-card p-6 rounded-[8px] shadow-[0_0_5px_rgba(0,0,0,.1)] " id=${job.id}>
+  if (list.length === 0) {
+    jobCardContainer.innerHTML = generateEmptyHtml();
+  } else {
+    list.forEach((job) => {
+      let x = "";
+      if (job.status === "NOT APPLIED") {
+        x = "bg-gray-200";
+      } else if (job.status === "INTERVIEW") {
+        x = "bg-green-400";
+      } else {
+        x = "bg-red-400";
+      }
+
+      card += `<div class="job-card p-6 rounded-[8px] shadow-[0_0_5px_rgba(0,0,0,.1)] " id=${job.id}>
 
 
                 <div class="job-heading mb-5 flex w-full justify-between items-center">
@@ -37,15 +35,10 @@ function generateJobCard(list){
                     <button class="btn cursor-pointer text-green-600 border-green-600" id="job-interview-btn">INTERVIEW</button>
                     <button class="btn cursor-pointer text-red-500 border-red-500" id="job-rejected-btn">REJECTED</button>
                 </div>
-            </div>`
+            </div>`;
     });
     jobCardContainer.innerHTML = card;
-    }
+  }
 
-
-
-    
-    updateDashboard();
-
-    
+  updateDashboard();
 }
