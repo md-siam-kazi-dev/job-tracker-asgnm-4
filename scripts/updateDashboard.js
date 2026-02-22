@@ -9,7 +9,7 @@ function updateDashboard(){
     document.querySelector('.job-available').innerText =allJobs
     let currentStatus = document.querySelector(".current-status");
 
-    console.log(currentStatus)
+   
         if(currentStatus){
             
 

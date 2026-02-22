@@ -31,7 +31,7 @@ function generateJobCard(list){
                 </div>
 
                 <p class="text-gray-500 text-[16px] mb-5">${job.salaryDutyTimeLocation}</p>
-                <div class="rounded-[8px] px-3 py-2 w-fit font-medium text-black ${x}">${job.status}</div>
+                <div class="rounded-[8px] px-3 py-2 w-fit font-medium text-black ${x} status-div">${job.status}</div>
                 <p class="text-gray-900 text-[14px] mt-2 mb-5">${job.description}</p>
                 <div class="job-status-btn">
                     <button class="btn cursor-pointer text-green-600 border-green-600" id="job-interview-btn">INTERVIEW</button>
