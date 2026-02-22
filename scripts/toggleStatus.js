@@ -4,20 +4,20 @@ jobCardContainer.addEventListener("click", function (ele) {
   if (ele.target.classList.contains('job-interview-btn')) {
     let parent = ele.target.parentNode.parentNode;
     let intId = parent.id;
-    console.log('intintint');
+    //console.log('intintint');
     // status div color and name interactivey
     statusDiv(parent.querySelector(".status-div"), "bg-green-400", "INTERVIEW");
 
     companyName.forEach((job) => {
       // check tab selection all or rejected or interview tab
       if (!isAlltab && intId === job.id) {
-        console.log(job.status)
+       // console.log(job.status)
         job.status = "INTERVIEW";
         
 
       }
       if (job.status === "REJECTED" && isAlltab && intId === job.id) {
-        console.log(job.status)
+        //console.log(job.status)
         job.status = "INTERVIEW";
         parent.remove();
 
@@ -43,13 +43,13 @@ jobCardContainer.addEventListener("click", function (ele) {
     companyName.forEach((job) => {
       // if tab is interview but client switch to rejected it will remove from interview tab
        if (!isAlltab && rjctId === job.id) {
-        console.log(job.status)
+        //console.log(job.status)
         job.status = "REJECTED";
         
 
       }
       if (job.status === "INTERVIEW" && isAlltab && rjctId === job.id) {
-        console.log(job.status)
+        //console.log(job.status)
         job.status = "REJECTED";
         parentt.remove();
 
