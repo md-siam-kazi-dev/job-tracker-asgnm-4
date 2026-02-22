@@ -57,6 +57,8 @@ jobCardContainer.addEventListener("click", function (ele) {
 
 
   } else if (ele.target.classList.contains("delete")) {
+
+    // if client click delete icon on the right
     
     let parent = ele.target.parentNode.parentNode;
     let containerDiv = parent.parentNode;
@@ -71,8 +73,9 @@ jobCardContainer.addEventListener("click", function (ele) {
     // if job container is empty then run this fuction to generate empty html
     if(jobCardContainer.children.length === 0)isEmpty();
     
-
+    // filter main array to remove deleted item 
     companyName = companyName.filter((job) => job.id != remobeId);
+    
     updateDashboard();
   }
 
